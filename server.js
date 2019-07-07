@@ -8,6 +8,9 @@ app.get("/", (req, res) => {
   res.send("API Running");
 });
 
+// Initialize the middleware
+app.use(express.json());
+
 // Define Routes
 app.use("/api/users", require("./routers/api/users"));
 app.use("/api/auth", require("./routers/api/auth"));
